@@ -1,21 +1,14 @@
-<sveltte:head>
-    <script defer src="anime.min.js"></script>
-</sveltte:head>
-
 <script>
     import image from "./image.jpg";
     import ArrowDown from "svelte-material-icons/ArrowDown.svelte";
-    import { onMount } from 'svelte';
+    import { onMount } from "svelte";
 
     onMount(() => {
-        anime.timeline({loop: false}).add({
-            targets: '.heading .letter',
-            translateY: [-100,0],
-            easing: "easeOutExpo",
-            duration: 1400,
-            delay: (el, i) => 35 * i
-        })
+        document.querySelectorAll(".letter").forEach((e, i) => {
+            e.style.setProperty("--x", i);
+        });
     });
+
 </script>
 
 <div class="section">
@@ -24,7 +17,11 @@
             <div class="tint">
                 
             </div>
-            <h1 class="heading">{@html "Anonymous Clothing".replace(/\S/g, "<span class='letter'>$&</span>")}</h1>
+            <h1 class="heading">
+                {#each "Anonymous Clothing".split(" ").join(" ") as n}
+                    <span class='letter'>{n}</span>
+                {/each}
+            </h1>
             <div class="arrow">
                 <ArrowDown color="#ffffff" size="36px" />
             </div>
@@ -48,6 +45,14 @@
         letter-spacing: 0.4em;
         overflow: hidden;
         padding: 40px 0;
+    }
+
+    .heading .letter {
+        --x: 0;
+        display: inline-block;
+        line-height: 1em;
+        transform: translateY(-100px);
+        animation: appear 1s ease-in-out calc(0.034s * var(--x)) forwards;
     }
 
     .section, .wrapper, .cover {
@@ -93,6 +98,12 @@
         overflow: hidden;
         isolation: isolate;
         animation: smooth 1s ease-out forwards;
+    }
+
+    @keyframes appear {
+        to {
+            transform: translateY(0px);
+        }
     }
 
     @keyframes smooth {

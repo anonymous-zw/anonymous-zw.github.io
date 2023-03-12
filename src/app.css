@@ -33,12 +33,6 @@ th, td {
 	padding: 10px;
 }
 
-.heading .letter {
-	display: inline-block;
-	line-height: 1em;
-	transform: translateY(-100px);
-}
-
 .focus {
 	animation: reveal 1s ease-out forwards;
 }
