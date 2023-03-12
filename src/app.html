@@ -4,9 +4,33 @@
 		<meta charset="utf-8" />
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,500&family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">  
 		%sveltekit.head%
+
+		<script defer>
+			window.addEventListener('scroll', () => {
+            	document.getElementsByClassName("cover")[0].style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+
+				let observer = new IntersectionObserver((entries, observer) => {
+						entries.forEach((entry) => {
+							if (!entry.target.classList.contains("focus") && entry.intersectionRatio > 0.6) {
+								entry.target.classList.add("focus");
+							}
+						});
+					}, {
+						threshold: 0.6
+					});
+				
+				document.querySelectorAll(".section-image").forEach((image) => {
+					observer.observe(image);
+				}, false);
+			});
+		</script>
 	</head>
 	<body>
-		<div>%sveltekit.body%</div>
+		%sveltekit.body%
 	</body>
 </html>
