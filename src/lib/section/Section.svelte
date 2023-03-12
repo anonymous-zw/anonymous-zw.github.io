@@ -59,5 +59,6 @@
 
 	.wrapper {
 		overflow: hidden;
+		isolation: isolate;
 	}
 </style>
