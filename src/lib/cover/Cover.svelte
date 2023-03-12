@@ -129,6 +129,7 @@
         to {
             background-color: #333134ff;
             backdrop-filter: blur(100px);
+            -webkit-backdrop-filter: blur(100px);
         }
     }
 
