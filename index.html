@@ -4,37 +4,75 @@
 		<meta charset="utf-8" />
 		<link rel="icon" href="./favicon.png" />
 		<meta name="viewport" content="width=device-width" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,500&family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet"> 
+		
 		<meta http-equiv="content-security-policy" content="">
-		<link href="./_app/immutable/assets/_layout.d807c85d.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/entry/start.5b0d94df.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/index.6fcd49a5.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.1ff5fdd5.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/app.33107a3f.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/_layout.svelte.926dc89a.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/stores.dbb0460b.js">
+		<link href="./_app/immutable/assets/_layout.c78e43a2.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/_page.3f1e0f51.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.2bc76851.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.649c67d4.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.469df657.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.48c52ace.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/_layout.svelte.e2438334.js">
 		<link rel="modulepreload" href="./_app/immutable/entry/_layout.js.984db11e.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/_layout.da46b06b.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/_page.svelte.13fa96d9.js"><title>Ideal Classroom</title><!-- HEAD_svelte-19dyerf_START --><!-- HEAD_svelte-19dyerf_END -->
+		<link rel="modulepreload" href="./_app/immutable/entry/_page.svelte.c4b3ba75.js"><title>Anonymous Clothing</title><!-- HEAD_svelte-humjno_START --><!-- HEAD_svelte-humjno_END -->
+		
+		<script defer>
+			window.addEventListener('scroll', () => {
+            	document.getElementsByClassName("cover")[0].style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+
+				let observer = new IntersectionObserver((entries, observer) => {
+						entries.forEach((entry) => {
+							if (!entry.target.classList.contains("focus") && entry.intersectionRatio > 0.6) {
+								entry.target.classList.add("focus");
+							}
+						});
+					}, {
+						threshold: 0.6
+					});
+				
+				document.querySelectorAll(".section-image").forEach((image) => {
+					observer.observe(image);
+				}, false);
+			});
+		</script>
 	</head>
 	<body>
-		<div>
+		
 
 
-<div class="header svelte-v99ryk"><ul class="svelte-v99ryk"><li class="branding svelte-v99ryk"><img height="30em" src="/_app/immutable/assets/logo.49edd335.png" alt="Ideal Classroom"></li>
-		<li class="svelte-v99ryk active"><a href="/" preload="true" class="svelte-v99ryk">Home</a></li>
-		<li class="svelte-v99ryk"><a href="/about" preload="true" class="svelte-v99ryk">About</a></li></ul>
+
+
+<main><div class="main"><div class="slot">
+
+<div class="main"><sveltte:head><script defer src="anime.min.js"></script></sveltte:head>
+
+
+
+<div class="section svelte-kx6avl"><div class="wrapper svelte-kx6avl"><div class="cover svelte-kx6avl" style="background-image: url(/_app/immutable/assets/image.ab5e68cc.jpg)"><div class="tint svelte-kx6avl"></div>
+            <h1 class="heading svelte-kx6avl"><!-- HTML_TAG_START --><span class='letter'>A</span><span class='letter'>n</span><span class='letter'>o</span><span class='letter'>n</span><span class='letter'>y</span><span class='letter'>m</span><span class='letter'>o</span><span class='letter'>u</span><span class='letter'>s</span> <span class='letter'>C</span><span class='letter'>l</span><span class='letter'>o</span><span class='letter'>t</span><span class='letter'>h</span><span class='letter'>i</span><span class='letter'>n</span><span class='letter'>g</span><!-- HTML_TAG_END --></h1>
+            <div class="arrow svelte-kx6avl"><svg viewBox="0 0 24 24" width="36px" height="36px"><path d="M11,4H13V16L18.5,10.5L19.92,11.92L12,19.84L4.08,11.92L5.5,10.5L11,16V4Z" fill="#ffffff"></path></svg></div></div></div>
 </div>
-
-<main class="svelte-xq2s0p"><div class="main"><div class="slot svelte-xq2s0p">
-
-<div class="main"><h1>Anonymous Clothing</h1></div></div></div>
-</main>
+    <div class="section style-0 svelte-10vwski"><div class="wrapper svelte-10vwski"><img class="section-image svelte-10vwski" src="https://images.unsplash.com/photo-1678448743686-21c2be7333c6" alt="Product One"></div>
+	<div class="info svelte-10vwski"><h1 class="svelte-10vwski">Product One</h1>
+		<p>For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life. For God did not send his Son into the world to condemn the world, but to save the world through him. Whoever believes in him is not condemned, but whoever does not believe stands condemned already because they have not believed in the name of God’s one and only Son. This is the verdict: Light has come into the world, but people loved darkness instead of light because their deeds were evil. Everyone who does evil hates the light, and will not come into the light for fear that their deeds will be exposed. But whoever lives by the truth comes into the light, so that it may be seen plainly that what they have done has been done in the sight of God.</p>
+		<a href="./">See more...</a></div>
+</div>
+    <div class="section style-1 svelte-10vwski"><div class="wrapper svelte-10vwski"><img class="section-image svelte-10vwski" src="https://images.unsplash.com/photo-1678595237275-4cf0bd0e2187" alt="Product Two"></div>
+	<div class="info svelte-10vwski"><h1 class="svelte-10vwski">Product Two</h1>
+		<p>After this, Jesus and his disciples went out into the Judean countryside, where he spent some time with them, and baptized. Now John also was baptizing at Aenon near Salim, because there was plenty of water, and people were coming and being baptized. (This was before John was put in prison.) An argument developed between some of John’s disciples and a certain Jew over the matter of ceremonial washing. They came to John and said to him, “Rabbi, that man who was with you on the other side of the Jordan—the one you testified about—look, he is baptizing, and everyone is going to him.”</p>
+		<a href="./">See more...</a></div>
+</div></div></div></div></main>
 
 
 			
 			<script>
 				{
-					__sveltekit_kpj94k = {
+					__sveltekit_9lwoql = {
 						env: {},
 						base: new URL(".", location).pathname.slice(0, -1),
 						element: document.currentScript.parentElement
@@ -43,10 +81,10 @@
 					const data = [null,null];
 
 					Promise.all([
-						import("./_app/immutable/entry/start.5b0d94df.js"),
-						import("./_app/immutable/entry/app.33107a3f.js")
+						import("./_app/immutable/entry/start.2bc76851.js"),
+						import("./_app/immutable/entry/app.48c52ace.js")
 					]).then(([kit, app]) => {
-						kit.start(app, __sveltekit_kpj94k.element, {
+						kit.start(app, __sveltekit_9lwoql.element, {
 							node_ids: [0, 2],
 							data,
 							form: null,
@@ -55,6 +93,6 @@
 					});
 				}
 			</script>
-		</div>
+		
 	</body>
 </html>
