@@ -52,7 +52,7 @@
         display: inline-block;
         line-height: 1em;
         transform: translateY(-100px);
-        animation: appear 1s ease-in-out calc(0.034s * var(--x)) forwards;
+        animation: appear 1s ease-in-out calc(0.034s * var(--x) + 0.4s) forwards;
     }
 
     .section, .wrapper, .cover {
