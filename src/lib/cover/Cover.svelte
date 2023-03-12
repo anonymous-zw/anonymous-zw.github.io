@@ -1,5 +1,8 @@
+<sveltte:head>
+    <script defer src="anime.min.js"></script>
+</sveltte:head>
+
 <script>
-    import anime from 'animejs/lib/anime.es.js';
     import image from "./image.jpg";
     import ArrowDown from "svelte-material-icons/ArrowDown.svelte";
     import { onMount } from 'svelte';
@@ -53,12 +56,12 @@
         align-items: center;
     }
 
-    .section, .wrapper {
-        box-sizing: border-box;
+    .section {
         padding: 0;
         margin: 0;
         width: 100vw;
         height: 100vh;
+        animation: shrink 1s ease-out forwards;
     }
 
     .cover {
@@ -84,15 +87,21 @@
     }
 
     .wrapper {
+        width: 100%;
+        height: 100%;
         overflow: hidden;
-        animation: grow 1s ease-out forwards;
+        animation: smooth 1s ease-out forwards;
     }
 
-    @keyframes grow {
+    @keyframes smooth {
         to {
-            width: calc(100vw - 4em);
-            height: calc(100vh - 4em);
             border-radius: 1.5em;
+        }
+    }
+
+    @keyframes shrink {
+        to {
+            padding: 2em;
         }
     }
 
