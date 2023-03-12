@@ -72,6 +72,7 @@
         background-position: center;
         border-radius: 0;
         animation: reveal 1s ease-out forwards;
+        isolation: isolate;
     }
 
     .tint {
@@ -90,6 +91,7 @@
         width: 100%;
         height: 100%;
         overflow: hidden;
+        isolation: isolate;
         animation: smooth 1s ease-out forwards;
     }
 
